@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+.vercel/
+.netlify/
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
