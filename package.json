@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port=3000 --host=127.0.0.1",
-    "build": "vite build",
+    "dev": "npm --prefix projects/above-the-fold run build && node scripts/embed-above-the-fold.mjs && vite --port=3000 --host=127.0.0.1",
+    "build": "npm --prefix projects/above-the-fold run build && node scripts/embed-above-the-fold.mjs && vite build",
     "preview": "vite preview --host=127.0.0.1",
     "lint": "tsc --noEmit"
   },

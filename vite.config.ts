@@ -12,6 +12,17 @@ export default defineConfig({
   resolve: {
     alias: { '@': projectRoot },
   },
+  build: {
+    rollupOptions: {
+      input: {
+        home: path.resolve(projectRoot, 'index.html'),
+        services: path.resolve(projectRoot, 'services.html'),
+        work: path.resolve(projectRoot, 'work.html'),
+        about: path.resolve(projectRoot, 'about.html'),
+        contact: path.resolve(projectRoot, 'contact.html'),
+      },
+    },
+  },
   server: {
     host: '127.0.0.1',
     port: 3000,

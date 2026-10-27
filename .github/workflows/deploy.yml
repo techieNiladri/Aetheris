@@ -1,0 +1,62 @@
+name: Build and deploy my services site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out my site
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Above the Fold dependencies
+        run: npm ci --prefix projects/above-the-fold
+      - name: Check TypeScript
+        run: npm run lint
+      - name: Build the site
+        run: npm run build
+      - name: Check dependencies for known vulnerabilities
+        run: npm audit --audit-level=high
+      - name: Check Above the Fold dependencies for known vulnerabilities
+        run: npm audit --prefix projects/above-the-fold --audit-level=high
+      - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+      - name: Upload the built site
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./dist
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Publish my site
+        id: deployment
+        uses: actions/deploy-pages@v4
