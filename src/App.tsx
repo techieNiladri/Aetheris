@@ -89,7 +89,8 @@ function SiteHeader({ currentPage }: { currentPage: PageId }) {
         <summary><Menu size={16} aria-hidden="true" /><span>Menu</span></summary>
         <nav className="mobile-menu-panel" aria-label="Mobile navigation"><NavigationLinks currentPage={currentPage} /></nav>
       </details>
-      <a className="header-cta" href="./contact.html">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></a>
+      {(currentPage === 'work' || currentPage === 'services') && <a className="header-cta" href="./contact.html">Let’s talk <ArrowUpRight size={15} aria-hidden="true" /></a>}
+
     </header>
   );
 }
@@ -207,7 +208,7 @@ function AboutPage() {
 }
 
 function ContactBand() {
-  return <section className="contact-band section-wrap"><p className="eyebrow"><span className="status-dot" /> HAVE A PROJECT IN MIND?</p><div className="contact-band-row"><h2>Let’s make it <em>clear.</em></h2><a className="button button-light" href="./contact.html">Talk about your project <ArrowUpRight size={17} aria-hidden="true" /></a></div></section>;
+  return <section className="contact-band section-wrap"><p className="eyebrow"><span className="status-dot" /> HAVE A PROJECT IN MIND?</p><div className="contact-band-row"><h2>Let’s make it <em>clear.</em></h2></div></section>;
 }
 
 function ContactPage() {
