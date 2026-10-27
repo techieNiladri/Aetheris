@@ -159,7 +159,6 @@ function HomePage() {
       <div className="work-heading"><div><p className="eyebrow">SELECTED WORK</p><h2>Things I’ve <em>made.</em></h2></div><a className="text-link" href="./work.html">Explore my work <ArrowUpRight size={15} aria-hidden="true" /></a></div>
       <div className="project-grid">{featuredProjects.map((project) => <ProjectCard key={project.name} project={project} />)}</div>
     </section>
-    <ContactBand />
   </>;
 }
 
@@ -176,7 +175,6 @@ function ServicesPage() {
       <div><p className="eyebrow">WHAT I PLAN FOR</p><h2>Every page earns<br />its <em>place.</em></h2></div>
       <div className="service-details-copy"><p>I plan the page structure and content flow with you, so visitors can find the information they need without digging through unrelated sections.</p><ul><li>Page structure and content hierarchy</li><li>Mobile-first layouts and accessible controls</li><li>Responsive implementation and handoff</li></ul></div>
     </section>
-    <ContactBand />
   </>;
 }
 
@@ -189,7 +187,6 @@ function WorkPage() {
       <div className="project-grid">{projects.map((project) => <ProjectCard key={project.name} project={project} />)}</div>
       <div className="broader-portfolio"><p>I share more about my development background and current projects in my professional portfolio.</p><a className="text-link" href="https://techieniladri.github.io/niladridey_portfolio/" target="_blank" rel="noreferrer">View my professional portfolio <ArrowUpRight size={15} aria-hidden="true" /></a></div>
     </section>
-    <ContactBand />
   </>;
 }
 
@@ -206,7 +203,6 @@ function AboutPage() {
       <div className="approach-intro"><p className="eyebrow">HOW A PROJECT MOVES</p><h2>Clear steps.<br /><em>Good collaboration.</em></h2><p>I keep the work visible, ask questions early, and make decisions with your goals in mind.</p></div>
       <ol className="steps-list">{steps.map((step) => <li key={step}><span className="step-check"><Check size={15} aria-hidden="true" /></span><p>{step}</p></li>)}</ol>
     </section>
-    <ContactBand />
   </>;
 }
 
@@ -223,6 +219,7 @@ function ContactPage() {
       <div className="contact-page-primary"><p className="eyebrow">START A CONVERSATION</p><a className="contact-email" href="mailto:deyniladri937@gmail.com?subject=Website%20project%20enquiry">deyniladri937@gmail.com <ArrowUpRight size={22} aria-hidden="true" /></a><p>I handle enquiries by email; this site doesn’t collect or store form submissions.</p></div>
       <div className="contact-page-details"><div><span>LOCATION</span><p>Kolkata, India</p></div><div><span>ELSEWHERE</span><p><a href="https://www.linkedin.com/in/niladri-dey-280710d/" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={14} aria-hidden="true" /></a><a href="https://github.com/techieNiladri" target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={14} aria-hidden="true" /></a></p></div></div>
     </section>
+    <ContactBand />
   </>;
 }
 
