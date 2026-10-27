@@ -12,7 +12,7 @@
 }
 
 html { scroll-behavior: smooth; }
-body { min-width: 320px; margin: 0; overflow-x: hidden; background: #050505; color: #ededed; }
+body { min-width: 0; margin: 0; overflow-x: clip; background: #050505; color: #ededed; }
 .font-editorial { font-family: "Playfair Display", serif; }
 ::selection { background: #c19a6b; color: #050505; }
 :focus-visible { outline: 2px solid #c19a6b; outline-offset: 4px; }

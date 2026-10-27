@@ -4,7 +4,7 @@
 :root { font-family: 'DM Sans', sans-serif; color: #f4f2ed; background: #0b0c0b; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; --bg: #0b0c0b; --panel: #111311; --text: #f4f2ed; --muted: #a5aaa3; --green: #b8e27a; --line: rgba(244,242,237,.14); }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 86px; }
-body { margin: 0; min-width: 320px; background: var(--bg); color: var(--text); }
+body { margin: 0; min-width: 0; background: var(--bg); color: var(--text); }
 body::before { content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .15; background-image: linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px); background-size: 68px 68px; mask-image: linear-gradient(to bottom,black,transparent 85%); }
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -65,8 +65,8 @@ h1 span, h2 em { color: var(--green); font-style: normal; }
 
 .project-image { display: block; aspect-ratio: 1.55; position: relative; overflow: hidden; background: #151a26; border-bottom: 1px solid var(--line); }
 
-.project-image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .55s cubic-bezier(.2,.75,.3,1); }
-.project-image:hover img { transform: scale(1.035); }
+.project-image img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; transition: none; }
+.project-image:hover img { transform: none; }
 .image-open { position: absolute; right: 16px; bottom: 16px; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; background: var(--green); color: #13160f; opacity: 0; transform: translateY(5px); transition: .2s ease; }.project-image:hover .image-open,.project-image:focus-visible .image-open { opacity: 1; transform: translateY(0); }
 .project-info { padding: 24px clamp(18px,2.5vw,34px) 30px; display: flex; flex: 1; flex-direction: column; }
 .project-meta { display: flex; justify-content: space-between; color: #9fa59b; font-size: 10px; letter-spacing: .05em; }
@@ -187,4 +187,23 @@ h1 span, h2 em { color: var(--green); font-style: normal; }
 }
 @media (max-width: 640px) {
   .site-header .mobile-menu-panel { display: grid; }
+}
+
+/* Keep the hero illustration and project screenshots legible on narrow screens. */
+@media (max-width: 640px) {
+  .hero-copy { min-width: 0; }
+  .hero-actions { position: relative; z-index: 2; }
+  .hero-art { width: min(100%, 390px); margin-top: 52px; }
+  .art-window { width: min(86%, 340px); transform: none; }
+  .project-image { display: grid; place-items: center; aspect-ratio: 1.45; padding: 8px; }
+  .project-image img { object-fit: contain; object-position: center; }
+  .project-image:hover img { transform: none; }
+}
+
+@media (max-width: 360px) {
+  .section-wrap { padding-left: 16px; padding-right: 16px; }
+  .hero h1 { font-size: clamp(42px, 12.5vw, 49px); }
+  .hero-actions { align-items: flex-start; flex-direction: column; gap: 14px; }
+  .hero-art { margin-top: 40px; }
+  .art-window-content { min-height: 250px; padding: 32px 22px; }
 }
