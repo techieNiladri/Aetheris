@@ -1,30 +1,127 @@
-# Aetheris — my services website
+# Aetheris
 
-I’m building this website to introduce the web development services I offer to local businesses and independent teams. I’m adapting an AI Studio concept into a real, first-person services site and replacing fictional claims with my own work and contact details.
+<div align="center">
+  <img src="https://raw.githubusercontent.com/techieNiladri/Aetheris/main/public/favicon.svg" alt="Aetheris logo" width="120" />
+</div>
 
-## Run locally
+<p align="center">
+  <strong>Modern portfolio + services website for a creative developer</strong>
+</p>
 
-1. Install the main site dependencies with `npm ci`.
-2. Install the nested demo dependencies with `npm ci --prefix projects/above-the-fold`.
-3. Start the development server with `npm run dev`; this builds the nested demo before starting Aetheris.
-4. Create a production build with `npm run build`.
+<p align="center">
+  <a href="https://techieniladri.github.io/Aetheris/" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/badge/Live%20Demo-Aetheris-6ee7b7?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
+  </a>
+  <a href="https://github.com/techieNiladri/Aetheris" target="_blank" rel="noreferrer">
+    <img src="https://img.shields.io/badge/Code-GitHub-111827?style=for-the-badge&logo=github" alt="GitHub Repository" />
+  </a>
+</p>
 
-This is a static, multi-page frontend. My contact link opens an email addressed to me; the site does not collect or store form submissions. Neither Aetheris nor the nested Above the Fold demo currently requires environment variables or API credentials. I maintain Above the Fold in `projects/above-the-fold` and serve its static demo at `/above-the-fold/index.html`. Navigation uses direct HTML page routes, including on mobile.
+<p align="center">
+  <img src="https://img.shields.io/badge/TypeScript-88.2%25-3178C6?style=flat-square&logo=typescript" alt="TypeScript 88.2%" />
+  <img src="https://img.shields.io/badge/HTML-9%25-E34F26?style=flat-square&logo=html5" alt="HTML 9%" />
+  <img src="https://img.shields.io/badge/JavaScript-1.5%25-F7DF1E?style=flat-square&logo=javascript" alt="JavaScript 1.5%" />
+  <img src="https://img.shields.io/badge/CSS-1.3%25-1572B6?style=flat-square&logo=css3" alt="CSS 1.3%" />
+</p>
 
-## Environment and secrets
+Aetheris is a polished multi-page portfolio and services website designed to showcase web development work, digital product experiments, and a clear value proposition for growing businesses. It blends a premium editorial aesthetic with practical UX — helping visitors understand what I do, how I work, and how to get in touch.
 
-I don’t need a `.env` file to build or run these static sites. I keep credentials out of the browser bundle and repository. If I add a server-side integration later, I’ll store its secrets in the hosting provider’s environment settings and document only the required variable names here, never their values.
+## ✨ Highlights
 
-## What I’m showing
+- Elegant, modern landing pages for services, work, about, and contact
+- Responsive design optimized for mobile and desktop browsing
+- Clear presentation of selected client-facing and experimental projects
+- Professional portfolio links and direct contact pathways
+- Built with React + TypeScript and deployed via GitHub Pages
+- Includes the embedded "Above the Fold" landing-page concept experiment
 
-- I publish five pages: Home, Services, Work, About, and Contact.
-- I offer focused landing pages, small-business website refreshes, and useful web interfaces.
-- I show Neural-Decider and Keeper App alongside my Royal Shef Hotel concept and Above the Fold landing-page experiment. I label the concept projects clearly and describe their current limits.
-- You can reach me at `deyniladri937@gmail.com`.
-- I link to my professional portfolio: <https://techieniladri.github.io/niladridey_portfolio/>.
+## 🌐 Live link
 
-I’m based in Kolkata, India. I’m early in my development career, so I describe my work plainly and avoid unsupported performance claims, client testimonials, or awards.
+Open the app here:
 
-## Publishing
+https://techieniladri.github.io/Aetheris/
 
-I build and deploy this static site with the GitHub Actions workflow in `.github/workflows/deploy.yml`. In the repository’s **Settings → Pages**, I select **GitHub Actions** as the publishing source. A push to `main` checks both projects, builds the site, audits their dependencies, and deploys the generated `dist` directory.
+## 🧩 What this app includes
+
+- Home: a strong introduction to the brand and service offering
+- Services: clear packaging around website design and frontend build work
+- Work: featured project showcases and live/demo links
+- About: process-focused narrative on how I work
+- Contact: direct email access for project enquiries
+
+## 🛠️ Tech stack
+
+- React
+- TypeScript
+- Vite
+- Tailwind-inspired styling and custom design system
+- GitHub Actions for automated build and deployment
+- GitHub Pages publishing
+
+## 🚀 Run locally
+
+1. Install the main site dependencies:
+   ```bash
+   npm ci
+   ```
+
+2. Install the nested demo dependencies:
+   ```bash
+   npm ci --prefix projects/above-the-fold
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## 📁 Project structure
+
+```text
+Aetheris/
+├── public/
+├── src/
+├── projects/
+│   └── above-the-fold/
+├── scripts/
+├── .github/workflows/
+├── package.json
+├── vite.config.ts
+├── tsconfig.json
+└── README.md
+```
+
+## 🧠 About the project
+
+This site is built around the idea that a business website should feel useful, trustworthy, and easy to navigate. I’m showcasing practical frontend work, concept experiments, and product-minded design thinking in a clean, presentable format.
+
+I’m based in Kolkata, India, and I focus on creating straightforward, polished web experiences for local businesses, indie teams, and founders who want a cleaner digital presence.
+
+## 📬 Contact
+
+For project inquiries, email:
+
+- deyniladri937@gmail.com
+
+Professional portfolio:
+
+- https://techieniladri.github.io/niladridey_portfolio/
+
+GitHub:
+
+- https://github.com/techieNiladri
+
+## 📜 Publishing
+
+This project is built and deployed using the GitHub Actions workflow in `.github/workflows/deploy.yml`, and published with GitHub Pages.
+
+---
+
+<p align="center">
+  <i>Built with care, clarity, and a little bit of motion.</i>
+</p>
