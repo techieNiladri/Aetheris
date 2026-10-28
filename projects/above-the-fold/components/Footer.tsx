@@ -41,7 +41,7 @@ export const Footer: React.FC<FooterProps> = () => {
               <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
             </a>
           </div>
-          <p className="text-[10px] text-stone-700 uppercase tracking-[0.4em]">
+          <p className="text-center md:text-right text-[10px] text-stone-700 uppercase tracking-[0.4em]">
             © {currentYear} · My frontend experiment.
           </p>
         </div>

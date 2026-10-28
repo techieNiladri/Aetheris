@@ -31,7 +31,7 @@ export const Problem: React.FC = () => {
         </motion.div>
 
         <div className="relative">
-          <div className="relative z-10 aspect-[4/5] bg-stone-900 border border-stone-800 flex flex-col items-center justify-center p-8 overflow-hidden shadow-2xl">
+          <div className="relative z-10 min-h-[480px] md:aspect-[4/5] md:min-h-0 bg-stone-900 border border-stone-800 flex flex-col items-center justify-center p-6 sm:p-8 overflow-hidden shadow-2xl">
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
@@ -44,7 +44,7 @@ export const Problem: React.FC = () => {
                 opacity: { duration: 1.2 },
                 boxShadow: { duration: 4, repeat: Infinity, ease: "easeInOut" }
               }}
-              className="relative w-full max-w-[280px] aspect-[3/4] bg-[#050505] border border-stone-700/50 p-10 flex flex-col justify-between"
+              className="relative w-full max-w-[260px] sm:max-w-[280px] aspect-[3/4] bg-[#050505] border border-stone-700/50 p-8 sm:p-10 flex flex-col justify-between"
             >
               <div className="absolute -top-1 -left-1 w-4 h-4 border-t border-l border-[#C19A6B]" />
               <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b border-r border-[#C19A6B]" />
@@ -75,8 +75,7 @@ export const Problem: React.FC = () => {
               </div>
 
               <div className="mt-8">
-                <div className="h-12 w-full bg-[#C19A6B]/10 border border-[#C19A6B]/30 flex items-center justify-center relative overflow-hidden group">
-                  <span className="text-[8px] uppercase tracking-[0.3em] text-[#C19A6B] font-bold z-10">Singular Action</span>
+                <div aria-hidden="true" className="h-12 w-full bg-[#C19A6B]/10 border border-[#C19A6B]/30 flex items-center justify-center relative overflow-hidden group">
                   <motion.div
                     animate={{ x: ["-100%", "100%"] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
