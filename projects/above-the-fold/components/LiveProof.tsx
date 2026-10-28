@@ -29,9 +29,9 @@ export const LiveProof: React.FC = () => {
 
       <motion.div
         style={{ scale, opacity, y: yOffset }}
-        className="w-full max-w-5xl aspect-video bg-[#0a0a0a] border border-stone-800 rounded-sm shadow-2xl relative p-8 md:p-12"
+        className="w-full max-w-5xl bg-[#0a0a0a] border border-stone-800 rounded-sm shadow-2xl relative p-5 sm:p-8 md:aspect-video md:p-12"
       >
-        <div className="w-full h-full flex flex-col gap-8">
+        <div className="w-full flex flex-col gap-6 md:h-full md:gap-8">
           <div className="flex justify-between items-center opacity-40">
             <div className="w-24 h-4 bg-stone-800" />
             <div className="flex gap-4">
@@ -40,7 +40,7 @@ export const LiveProof: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-8 flex-grow">
+          <div className="flex flex-col gap-6 md:flex-row md:flex-grow md:gap-8">
             <div className="flex-grow space-y-6">
               <motion.div
                 className="h-16 w-3/4 bg-stone-900 border border-stone-800"
@@ -59,7 +59,7 @@ export const LiveProof: React.FC = () => {
                 }}
               />
             </div>
-            <div className="w-full md:w-1/3 aspect-square bg-stone-900 border border-stone-800 flex items-center justify-center">
+            <div className="w-full md:w-1/3 aspect-square md:aspect-auto bg-stone-900 border border-stone-800 flex items-center justify-center">
               <motion.div
                 className="w-1/2 h-1/2 rounded-full border border-stone-800"
                 animate={{ rotate: 360 }}

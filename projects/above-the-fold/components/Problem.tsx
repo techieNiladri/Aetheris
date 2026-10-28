@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export const Problem: React.FC = () => {
   return (
     <section className="py-32 px-6 flex justify-center bg-[#080808] overflow-hidden">
-      <div className="max-w-5xl w-full grid md:grid-cols-2 gap-20 items-center">
+      <div className="max-w-5xl w-full grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -31,7 +31,7 @@ export const Problem: React.FC = () => {
         </motion.div>
 
         <div className="relative">
-          <div className="relative z-10 h-[560px] md:aspect-[4/5] md:h-auto bg-stone-900 border border-stone-800 flex flex-col items-center justify-center p-6 sm:p-8 overflow-hidden shadow-2xl">
+          <div className="relative z-10 h-[560px] bg-stone-900 border border-stone-800 flex flex-col items-center justify-center p-6 sm:p-8 overflow-hidden shadow-2xl">
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
@@ -44,7 +44,7 @@ export const Problem: React.FC = () => {
                 opacity: { duration: 1.2 },
                 boxShadow: { duration: 4, repeat: Infinity, ease: "easeInOut" }
               }}
-              className="relative w-full max-w-[260px] sm:max-w-[280px] h-[340px] sm:h-[360px] md:h-auto md:aspect-[3/4] bg-[#050505] border border-stone-700/50 p-8 sm:p-10 flex flex-col justify-between"
+              className="relative w-full max-w-[260px] sm:max-w-[280px] h-[340px] sm:h-[360px] bg-[#050505] border border-stone-700/50 p-8 sm:p-10 flex flex-col justify-between"
             >
               <div className="absolute -top-1 -left-1 w-4 h-4 border-t border-l border-[#C19A6B]" />
               <div className="absolute -bottom-1 -right-1 w-4 h-4 border-b border-r border-[#C19A6B]" />
