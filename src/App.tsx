@@ -3,11 +3,22 @@ import { ArrowDownRight, ArrowRight, ArrowUpRight, Check, Menu } from 'lucide-re
 
 const projects = [
   {
+    name: 'Productivity Garden',
+    type: 'Full-stack productivity app',
+    image: './work/productivity-garden-cover.svg',
+    alt: 'Illustrated cover for my Productivity Garden app, showing a growing plant',
+    description: 'I built and deployed a task-to-plant app with individual gardens, a 20-minute growth cycle, harvesting, seed rewards, and a plant catalogue. I used row-level security, transactional SQL functions, and database constraints to control access and keep garden updates consistent.',
+    stack: 'JavaScript · Vite · Supabase Auth · PostgreSQL · Vercel',
+    links: [
+      { label: 'Live app', href: 'https://productivity-garden-hazel.vercel.app/' },
+    ],
+  },
+  {
     name: 'Neural-Decider',
     type: 'AI-assisted reflection experiment',
     image: './work/neural-decider-screenshot.png',
     alt: 'Neural-Decider opening screen',
-    description: 'I built a choice-based experience that explores how people approach everyday decisions, with generated reflections and visual summaries.',
+    description: 'I built a choice-based experience that explores everyday decisions through generated reflections and visual summaries. I present it as an exploration, not a validated psychological assessment.',
     stack: 'React · TypeScript · Google Generative AI',
     links: [
       { label: 'Open experiment', href: 'https://decision-timer.vercel.app/' },
@@ -19,7 +30,7 @@ const projects = [
     type: 'Responsive notes app',
     image: './work/keeperapp-screenshot.png',
     alt: 'Keeper App notes interface',
-    description: 'I made a lightweight notes interface inspired by Google Keep, with a responsive layout and create and delete interactions.',
+    description: 'I made a lightweight notes interface inspired by Google Keep, with a responsive layout and create and delete interactions. Notes stay in page state and do not persist after refresh.',
     stack: 'React · Material UI',
     links: [
       { label: 'Live demo', href: 'https://techieniladri.github.io/KeeperApp/' },

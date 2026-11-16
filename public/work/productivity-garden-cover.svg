@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="800" viewBox="0 0 1240 800" fill="none">
+  <title>Productivity Garden illustrated project cover</title>
+  <desc>A growing plant illustrates how tasks become visible progress. This is a project illustration, not an application screenshot.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1240" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#152B24"/>
+      <stop offset="1" stop-color="#0D1915"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="760" y1="260" x2="1000" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C7E99B"/>
+      <stop offset="1" stop-color="#78B981"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#background)" d="M0 0h1240v800H0z"/>
+  <circle cx="938" cy="383" r="235" fill="#243D2D"/>
+  <circle cx="938" cy="383" r="190" stroke="#698269" stroke-opacity=".25"/>
+  <circle cx="938" cy="383" r="281" stroke="#698269" stroke-opacity=".18"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="82" y="224" fill="#F4F2ED" font-size="76" font-weight="700" letter-spacing="-3">Productivity</text>
+    <text x="82" y="310" fill="#C7E99B" font-size="76" font-weight="700" letter-spacing="-3">Garden</text>
+    <text x="86" y="380" fill="#C6D1C3" font-size="30">Tasks into visible progress.</text>
+    <text x="86" y="473" fill="#C6D1C3" font-size="25">Plant a task.</text>
+    <text x="86" y="515" fill="#C6D1C3" font-size="25">Watch it grow.</text>
+    <text x="86" y="557" fill="#C6D1C3" font-size="25">Build your garden.</text>
+    <text x="86" y="725" fill="#A5B7A3" font-size="22">Illustrated project cover</text>
+  </g>
+  <ellipse cx="938" cy="588" rx="132" ry="27" fill="#0D1915"/>
+  <path d="M938 557V348" stroke="#ADD68D" stroke-width="14" stroke-linecap="round"/>
+  <path d="M936 458C846 458 806 415 799 353c88-9 136 28 137 105Z" fill="url(#leaf)"/>
+  <path d="M944 405c0-91 49-142 129-150 10 83-33 138-129 150Z" fill="url(#leaf)"/>
+  <path d="m938 456-86-63m93 11 83-90" stroke="#45694A" stroke-width="5" stroke-linecap="round"/>
+  <path d="M870 531h136l-20 78H890l-20-78Z" fill="#AD8662"/>
+  <rect x="856" y="520" width="164" height="27" rx="9" fill="#C8A27C"/>
+  <path d="M900 567h76" stroke="#E5C8A8" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="779" cy="273" r="7" fill="#C7E99B" fill-opacity=".7"/>
+  <circle cx="1097" cy="463" r="5" fill="#C7E99B" fill-opacity=".5"/>
+  <path d="M1055 191v20m-10-10h20" stroke="#C7E99B" stroke-opacity=".7" stroke-width="4" stroke-linecap="round"/>
+</svg>
