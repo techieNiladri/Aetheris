@@ -5,8 +5,8 @@ const projects = [
   {
     name: 'Productivity Garden',
     type: 'Full-stack productivity app',
-    image: './work/productivity-garden-cover.svg',
-    alt: 'Illustrated cover for my Productivity Garden app, showing a growing plant',
+    image: './work/productivity-garden-screenshot.png',
+    alt: 'My Productivity Garden app showing growing task plants and the plant catalogue',
     description: 'I built and deployed a task-to-plant app with individual gardens, a 20-minute growth cycle, harvesting, seed rewards, and a plant catalogue. I used row-level security, transactional SQL functions, and database constraints to control access and keep garden updates consistent.',
     stack: 'JavaScript · Vite · Supabase Auth · PostgreSQL · Vercel',
     links: [
