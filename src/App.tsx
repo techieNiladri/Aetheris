@@ -5,7 +5,8 @@ const projects = [
   {
     name: 'Productivity Garden',
     type: 'Full-stack productivity app',
-    image: './work/productivity-garden-screenshot.png',
+    image: './work/productivity-garden-screenshot.webp',
+    imageSrcSet: './work/productivity-garden-screenshot-640.webp 640w, ./work/productivity-garden-screenshot-960.webp 960w, ./work/productivity-garden-screenshot-1280.webp 1280w, ./work/productivity-garden-screenshot.webp 1871w',
     alt: 'My Productivity Garden app showing growing task plants and the plant catalogue',
     description: 'I built and deployed a task-to-plant app with individual gardens, a 20-minute growth cycle, harvesting, seed rewards, and a plant catalogue. I used row-level security, transactional SQL functions, and database constraints to control access and keep garden updates consistent.',
     stack: 'JavaScript · Vite · Supabase Auth · PostgreSQL · Vercel',
@@ -129,7 +130,7 @@ function ProjectCard({ project }: { project: (typeof projects)[number]; key?: Re
   return (
     <article className="project-card">
       <a className="project-image" href={project.links[0].href} target="_blank" rel="noreferrer" aria-label={`Open ${project.name}`}>
-        <img src={project.image} alt={project.alt} loading="lazy" />
+        <img src={project.image} srcSet={project.imageSrcSet} sizes={project.imageSrcSet ? '(max-width: 640px) calc(100vw - 40px), (max-width: 1440px) 42vw, 600px' : undefined} alt={project.alt} loading={project.imageSrcSet ? 'eager' : 'lazy'} />
         <span className="image-open"><ArrowUpRight size={19} aria-hidden="true" /></span>
       </a>
       <div className="project-info">
